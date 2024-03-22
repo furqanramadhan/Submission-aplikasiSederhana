@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedCity">
+
+    <!-- LinearLayout for Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_android"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Tombol Navigasi Kiri -->
+        <ImageView
+            android:id="@+id/backNav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_leftarrow"
+            android:padding="8dp" />
+
+        <!-- Judul Navigasi -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Top 10 City in Indonesia"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- Foto Profil -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_myprofile"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_city_0" />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Ubud"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Deskripsi"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus vestibulum leo. Donec risus enim, suscipit eget urna sed, suscipit mattis tellus. Curabitur id consectetur nunc. Donec dictum leo dui, sed volutpat dolor vestibulum a. Cras tristique tincidunt sem non dictum. Vivamus elementum scelerisque libero. Nulla dapibus elit at sapien rutrum commodo. Aenean justo elit, interdum et ornare id, scelerisque luctus quam. In in iaculis neque. Maecenas neque lacus, porta a vulputate ac, dictum eget nunc. Proin magna arcu, consequat interdum semper non, consectetur non lectus. Donec eget placerat ligula. Ut in posuere eros. In pellentesque diam ante, eu mattis risus pharetra sed. Praesent id dignissim augue. Praesent dolor risus, luctus vel pulvinar ut, fringilla eu risus. Mauris vestibulum id sem eget molestie. Praesent lacinia scelerisque egestas. Aenean tincidunt tristique fermentum. Vestibulum elementum lorem dolor, sed consectetur lorem finibus at."
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.15"
+                android:justificationMode="inter_word"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Kondisi Geografis"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/geographicsCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:lineSpacingMultiplier="1.15"
+                android:text="\t\tUbud terletak di dataran tinggi yang dikelilingi oleh perbukitan dan lembah. Ketinggian rata-rata Ubud adalah sekitar 300 meter di atas permukaan laut. Ubud terletak di Kecamatan Ubud, Kabupaten Gianyar, Bali, Indonesia.\n Luas wilayah \t: 8,26 km²\n Iklim: \n• Tropis\n• Curah hujan tinggi\n• 25°C - 30°C \n Tanah : Subur, Vulkanik\n Vegetasi\t\t: Hutan tropis, sawah, perkebunan \n Topografi \t: \n• Perbukitan \n• Sawah \n• Perkebunan"
+                android:textSize="12sp"
+                android:justificationMode="inter_word"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Lokasi"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/cityLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:lineSpacingMultiplier="1.15"
+                android:layout_gravity="center_horizontal"
+                android:text="https://maps.app.goo.gl/b92a3TbaajqghVkw9"
+                android:textSize="15sp"
+                android:justificationMode="inter_word"/>
+
+            <Button
+                android:id="@+id/action_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginVertical="60dp"
+                android:gravity="center"
+                android:backgroundTint="@color/blue_android"
+                android:text="Share"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
